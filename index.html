@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGA Hydraulics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.tvh.com/sites/tvh/files/styles/max_650x650/public/2023-07/HydraulicCylinders-Hero-2305-600x400%20%282%29.png?itok=jSrLWnio') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .business-name {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .slogan {
+            font-size: 18px;
+            max-width: 90%;
+            margin: 10px auto 20px;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        .menu {
+            background-color: rgba(128, 128, 128, 0.8);
+            padding: 10px 15px;
+            cursor: pointer;
+            position: relative;
+            margin-right: 20px;
+            user-select: none;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: rgba(128, 128, 128, 0.9);
+            width: 150px;
+            text-align: left;
+        }
+
+        .dropdown a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: rgba(128, 128, 128, 0.8);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 600px) {
+            body {
+                background: url('https://www.tvh.com/sites/tvh/files/styles/max_650x650/public/2023-07/HydraulicCylinders-Hero-2305-600x400%20%282%29.png?itok=jSrLWnio') no-repeat center center fixed;
+                background-size: cover;
+                background-attachment: scroll;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .business-name {
+                font-size: 35px;
+                margin: 0;
+            }
+
+            .menu {
+                margin-top: 10px;
+                width: fit-content;
+            }
+
+            .slogan {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .button {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="business-name">LGA Hydraulics</div>
+        <div class="menu" onclick="toggleMenu()">
+            Menu
+            <div class="dropdown">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <p class="slogan">
+        Precision engineering you can trust. <br>
+        Expert hydraulic repairs for peak performance. <br>
+        We manufacture and supply durable cylinders. <br>
+        Quality machining, milling, and welding. <br>
+        Keeping your equipment running smoothly.
+    </p>
+
+    <div class="button-container">
+        <a href="services.html" class="button">Services</a>
+        <a href="contact.html" class="button">Contact Us</a>
+        <a href="locate_us.html" class="button">Locate Us</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var dropdown = document.querySelector(".dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
